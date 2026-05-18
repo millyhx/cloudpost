@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>cloudpost</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- soft wind chime -->
+  <audio id="chime" preload="auto">
+    <!--Sound Effect by freesound_community from Pixabay -->
+    <source src="assets/chime.mp3" type="audio/mpeg">
+  </audio>
+
+  <div id="introModal" class="modal">
+  <div class="modal-card">
+    <h2>welcome ☁️</h2>
+
+    <p>
+      if you’ve got something on your mind, you can let it go here.
+      write it down, send it to the clouds, and feel a small moment of release.
+    </p>
+
+    <p>
+      this is a safe, anonymous space. nothing is stored or saved.
+    </p>
+
+    <button id="closeModal">start</button>
+  </div>
+  </div>
+
+  <div class="sky">
+    <div class="cloud-layer"></div>
+
+    <main class="container">
+      <h1>let it float away</h1>
+      <p class="subtitle">write what you need to release</p>
+
+      <textarea id="input" placeholder="what's on your mind..."></textarea>
+
+      <button id="sendBtn">send to the clouds</button>
+
+      <div id="floatingLayer"></div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
