@@ -37,16 +37,18 @@ body {
   z-index: 2;
 
   height: 100%;
-  width: min(520px, 92%);
+  width: 100%;
+  max-width: 520px;
+
   margin: 0 auto;
+
+  padding: 24px;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
 
   text-align: center;
-
-  padding:25px;
 }
 
 /* ✨ title */
