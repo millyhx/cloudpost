@@ -58,7 +58,6 @@ btn.addEventListener("click", () => {
 
   playChime();
 
-  // gentle splitting into “thought clouds”
   const chunks = text.split(/\.|,|\n/).filter(Boolean);
 
   chunks.forEach((chunk, i) => {
@@ -67,10 +66,9 @@ btn.addEventListener("click", () => {
     }, i * 350);
   });
 
+  // ✅ CLEAN RESET (fixes placeholder glitch)
   input.value = "";
-
-  btn.style.transform = "scale(0.98)";
-  setTimeout(() => btn.style.transform = "", 120);
+  input.blur(); // important for iOS Safari
 });
 
 input.addEventListener("keydown", (e) => {

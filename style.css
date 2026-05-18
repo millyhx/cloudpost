@@ -12,14 +12,21 @@ body {
 
 html, body {
   height: 100%;
-  overflow: hidden;
-  position: fixed;
-  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+textarea {
+  font-size: 16px; /* MUST stay 16px or iOS zooms */
+}
+
+input, textarea, select {
+  font-size: 16px;
 }
 
 /* 🌤️ BACKGROUND */
 .sky {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   position: relative;
 
