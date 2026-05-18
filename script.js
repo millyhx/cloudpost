@@ -66,9 +66,21 @@ btn.addEventListener("click", () => {
     }, i * 350);
   });
 
-  // ✅ CLEAN RESET (fixes placeholder glitch)
+  // 🧠 store current height (Safari fix trick)
+  const currentHeight = input.offsetHeight;
+
+  // clear input
   input.value = "";
-  input.blur(); // important for iOS Safari
+
+  // force Safari repaint cycle
+  input.style.height = "0px";
+
+  requestAnimationFrame(() => {
+    input.style.height = currentHeight + "px";
+  });
+
+  // release focus (prevents render corruption)
+  input.blur();
 });
 
 input.addEventListener("keydown", (e) => {
