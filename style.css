@@ -65,7 +65,7 @@ h1 {
 /* 💭 input box (glass style) */
 textarea {
   width: 100%;
-  height: 140px;
+  height: 80px;
 
   border: none;
   outline: none;
@@ -207,7 +207,6 @@ button:active {
   }
 
   textarea {
-    height: 120px;
     font-size: 15px;
   }
 
